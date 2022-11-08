@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngIf="erro1r" class="alert alert-danger" role="alert">
+   No ingresaste ningun pin
+  </div>
+  <input [(ngModel)]="ping" class="form-module input-regresar" type="text" placeholder="pint del juego">
+  <br>
+  <button (click)="ingresar()" class="btn btn-primary block">INGRESAR</button>
+
+</div>
+<div class="sticky-top">
+  <p class="text-center">Crea tu propio cuestionario GRATIS
+    <a  class="link" href="" routerLink="/usuario" >Aqui</a>
+
+  </p>
+</div>

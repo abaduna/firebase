@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="text-center">Loging</h2>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-3">
+              <input type="text" formControlName="usuario" class="form-control" placeholder="correo">
+            </div>
+            <div class="mb-3">
+              <input type="password" formControlName="password" class="form-control" placeholder="contraseña">
+            </div>
+            <button class="btn btn-primary" type="submit">Aceptar</button>
+            <button class="btn btn-secundary float-end " routerLink="/">Volver</button>
+          </form><br>
+          <div class="text-center">
+            <a href="#">Registrarse</a>
+            <a href="#">Recuperar contraseña</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
