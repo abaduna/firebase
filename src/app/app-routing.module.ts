@@ -4,7 +4,8 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 
 const routes: Routes = [
   { path: "", component: InicioComponent },
-  {path: 'usuario', loadChildren: () => import('./componentes/usuario/usuario-routing.module').then(m => m.UsuarioRoutingModule)},
+  {
+    path: 'usuario', loadChildren: () => import('./componentes/usuario/usuario.module')  .then(m => m.UsuarioModule) },
   { path: "**", redirectTo: "", pathMatch: "full" }
 ];
 

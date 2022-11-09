@@ -1,1 +1,22 @@
-<p>recuperar-pasword works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h3 class="text-center mt-4 title">Recuperar contraseña</h3>
+          <form [formGroup]="recuperarContrasena" (ngSubmit)="recuperarpaswonrd()">
+            <div class="mb-3">
+              <div class="text-danger ms-10" *ngIf="!recuperarContrasena.valid && recuperarContrasena.get('usuario' )?.touched">
+                el correo es <strong>obligatorio</strong>
+              </div>
+              <input type="text" formControlName="usuario" class="form-control form-control-lg" placeholder="ingrese su correo">
+            </div>
+            <button routerLink="/usuario" class="btn btn-info btn-lg"> Volver</button>
+            <button type="submit" class="btn btn-danger btn-lg float-end"> Acepar</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

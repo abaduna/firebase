@@ -1,1 +1,40 @@
-<p>registro works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card mt-4">
+        <div class="card-body ">
+          <h3 class="text-center">Registrarse </h3>
+          <form [formGroup]="refisterform" (ngSubmit)="register()">
+
+            <div class="mb-3">
+              <span class="text-danger"
+                *ngIf="refisterform.get('usuario')?.hasError('required') && refisterform.get('usuario')?.touched">el
+                correo es requerido</span>
+              <input type="text" formControlName="usuario" class="form-control form-control-lg" placeholder="correo">
+            </div>
+            <div class="mb-3">
+              <span class="text-danger"
+                *ngIf="refisterform.get('paswoord')?.hasError('paswoord') && refisterform.get('paswoord')?.touched">la
+                contraseña es requerida</span>
+              <input type="password" formControlName="paswoord" class="form-control form-control-lg"
+                placeholder="contraseña">
+            </div>
+            <div class="mb-3">
+              <span class="text-danger"
+                *ngIf="refisterform.get('repetirpaswoord')?.hasError('repetirpaswoord') && refisterform.get('repetirpaswoord')?.touched">el
+                correo es requerido</span>
+              <input type="password" formControlName="repetirpaswoord" class="form-control form-control-lg"
+                placeholder="repetir contraseña">
+            </div>
+            <button class="btn btn-primary" type="submit" disabled="refisterform.invalid">Aceptar</button>
+            <button class="btn btn-danger float-end" routerLink="/usuario">Volver</button>
+          </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

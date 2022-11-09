@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-recuperar-pasword',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recuperar-pasword.component.css']
 })
 export class RecuperarPaswordComponent implements OnInit {
-
-  constructor() { }
+  recuperarContrasena:FormGroup
+  constructor(private fb:FormBuilder) {
+    this.recuperarContrasena = this.fb.group({
+      usuario: ["", [Validators.required ,Validators.email]]
+    })
+  }
 
   ngOnInit(): void {
   }
+  recuperarpaswonrd(){
 
+  }
 }

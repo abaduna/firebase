@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./loging.component.css']
 })
 export class LogingComponent implements OnInit {
-
+  
   loginForm: FormGroup
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
@@ -16,10 +16,11 @@ export class LogingComponent implements OnInit {
     })
   }
 
+
   ngOnInit(): void {
   }
   login(){
   console.log(this.loginForm);
 
-  }
+}
 }
